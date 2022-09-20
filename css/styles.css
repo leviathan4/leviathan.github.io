@@ -1,0 +1,597 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Poppins:wght@200&display=swap');
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "Cinzel", sans-serif;
+}
+
+/*This sets up the heading for the website which contains the logo on the left and the navigation items on the right. The postion of the logo and the navigation bar is set in the header container through flex.*/
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 200px;
+  backdrop-filter: blur(5px);
+  background-image: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(0,0,0,0) 85%)
+}
+
+/*CSS for the logo located on the left and the navigation menu on the right.*/
+header .logo {
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .5rem;
+}
+
+header .navigation {
+  position: relative;
+}
+
+/*This sets the individual styles for the items in the navigation bar.*/
+.navigation-items a {
+  position: relative;
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+/*This adds an underline to the items.*/
+.navigation-items a:before {
+  content: '';
+  position: absolute;
+  background: #fff;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+/*This animates the underline so that it grows from the left*/
+.navigation-items a:hover:before {
+  width: 100%;
+}
+
+/*This keeps the underline present for the current page*/
+.navigation .navigation-items .active:before {
+  width: 100%;
+}
+
+.navigation .navigation-items .active {
+  text-shadow: 0 0 5px #fff, 0 0 5px #fff;
+}
+
+/*Defines what the sections will look like on the website.*/
+section {
+  padding: 100px 200px;
+}
+
+
+/*
+.character_menu a {
+  border-radius: 2px;
+  padding: 2px 13px;
+  background-color: #1680ac;
+  margin-top: 5px;
+  margin-left: 30px;
+  text-decoration: none;
+  color: #fff;
+}
+*/
+
+/*Defines what the center home element will look like on the webpage.*/
+.home {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+
+}
+
+/*the background container for the character page*/
+.home-character {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+  
+}
+
+/*the background container for the map page*/
+.home-map {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+
+}
+
+
+/* Styling for the items inside home.*/
+.home .content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  margin-top: 50px;
+  
+}
+
+.home .content h1 {
+  font-size: 4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+}
+
+.home .content h1 span {
+  font-size: 1.27em;
+  font-weight: 900;
+}
+
+.home .content p {
+  margin-bottom: 65px;
+  
+}
+
+.home .content p:first-of-type {
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,.3);
+  padding: 30px 25px;
+  border-radius: 10px;
+  font-family: poppins;
+  font-size: 1.2em;
+  line-height: 1.2em;
+}
+
+/*Creates the button for READ MORE and allows the button to grow when hovering it.*/
+.home .content a {
+  background: #fff;
+  padding: 15px 35px;
+  color: #1680ac;
+  font-size: 1.1em;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 2px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.home .content a:hover {
+  transform: scale(1.1);
+}
+
+/*Sets up stuff for the media icons*/
+/*all of the stuff about media icons had .home before it but I decided to have a different background for each page and to make CSS easier lowered the specificity of the CSS*/
+.media-icons {
+  z-index: 888;
+  position: absolute;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-icons a {
+  color: #fff;
+  font-size: 1.6em;
+  transition: transform 0.3s ease;
+}
+
+/*This is so that the last item on the list does not have a margin of 20px.*/
+.media-icons a:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+/*Hovering over the items cause them to grow.*/
+.media-icons a:hover {
+  transform: scale(1.3);
+}
+
+.character-menu {
+  z-index: 1050;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  width: 20%;
+  align-items: left;
+
+}
+
+.character-menu a {
+  font-size: 1.27em;
+  margin: 20px;
+  text-decoration: none;
+  color: #fff;
+
+}
+
+/*
+.gallery {
+  z-index: 800;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+  width: 100%;
+  overflow: auto;
+  padding-top: 10px;
+}
+*/
+
+.gallery {
+  z-index: 800;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 170px);
+  grid-auto-rows: 170px;
+  gap: 45px;
+  
+}
+
+.gallery .photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2%;
+}
+.photo img {
+  /*width: 170px;
+  height: 170px;
+  margin: 15px 14px;
+  border-radius: 2%;*/
+}
+
+.photo {
+  transition: transform 0.3s ease, border 0.4s ease;
+}
+
+.photo:hover {
+  transform: scale(1.2);
+  border: 3px solid #fff;
+  border-radius: 2%;
+}
+
+.desc {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  color: #fff;
+  width: 100%;
+}
+
+/*CSS for individual Character Pages*/
+.home-char {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  
+}
+
+.home-char .content {
+  z-index: 888;
+  color: #fff;
+  width: 60%;
+  margin-top: 50px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,.3);
+  padding: 30px 25px;
+  border-radius: 10px;
+  overflow: auto;
+  max-height: 530px;
+  
+}
+
+.char-name {
+  font-size: 4em;  
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 75px;
+  margin-bottom: 40px;
+  position: absolute;
+  top: 2em;
+  left: 3.2em;
+}
+
+.extra-info span {
+  font-weight: 700;
+}
+
+.extra-info {
+  position: absolute;
+  color: #fff;
+  top: 12.5em;
+  left: 12.8em;
+  display: flex;
+  justify-content: space-between;
+  width: 47%;
+}
+
+.home-char .content p {
+  font-family: poppins;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0px 15px 35px;
+ 
+}
+
+.char-pic {
+  width: 30%;
+  height: 30%;
+  margin-top: 50px;
+  border-radius: 10px;
+  animation: picIn 0.7s ease;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/*.home, .home-character, .home-map, .home-char {
+  animation: backgroundIn 0.85s ease;
+}
+*/
+
+.content, .media-icons, .gallery, .character-menu, svg, .char-name, .extra-info {
+  animation: transitionIn 0.7s ease;
+}
+
+svg {
+  width: 100%;
+}
+
+.nathair-map {
+  fill: #5f8dd3;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.bear-map {
+  fill: #aaccff;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.water-map {
+  fill: #87aade;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.earth-map {
+  fill: #8dd35f;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.wind-map {
+  fill: #afdde9;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.azores-map {
+  fill: #ff8080;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.other-map {
+  fill: #e6e6e6;
+  cursor: pointer;
+  transition: fill 0.5s ease;
+}
+
+.nathair-map:hover,
+.water-map:hover,
+.earth-map:hover,
+.wind-map:hover,
+.azores-map:hover,
+.other-map:hover,
+.bear-map:hover {
+  fill: #ffd780;
+}
+
+
+.full-img {
+  z-index: 1500;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,.8);
+  position: fixed;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+  top: -40px;
+  visibility: hidden;
+  transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s;
+}
+
+.hidden {
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 5px 10px rgba(0,0,0,.8);
+
+  opacity: 1;
+  top: 0;
+  visibility: visible;
+  transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s;
+}
+/*
+.default { 
+  opacity: 0;
+  visibility: hidden;
+  top: -10px; 
+  transition-duration: 200ms, 0; 
+  transition-property: opacity, visibility; 
+  transition-delay: 0, 200ms; 
+}
+
+.hidden { 
+  opacity: 1;
+  visibility: visible;
+  top: 0px;
+  transition-duration: 200ms, 0;
+  transition-property: opacity, visibility;
+  transition-delay: 200ms, 0; 
+}
+*/
+.full-img .name {
+  position: absolute;
+  top: 10%;
+  color:#fff;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+
+.full-img img {
+  width: 90%;
+  height: 50%;
+  max-width: 500px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  font-size: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.full-img span:hover {
+  transform: scale(1.2);
+}
+
+/*.reel {
+	margin-top: 15px;
+	-webkit-box-shadow: #FFFFFF 4px 4px 0 0;
+	-webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
+	border: 1px solid #FFFFFF;
+	box-shadow: #FFFFFF 4px 4px 0 0;
+	display: block;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 10px;
+	width: 140px;
+	margin-left: auto;
+	margin-right: auto;
+}
+*/
+
+@keyframes transitionIn {
+  from {
+    transform: translateY(-10px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes picIn {
+  from {
+    opacity: 0;
+    transform: translateX(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+@keyframes backgroundIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1040px) {
+  header {
+    padding: 12px 20px;
+  }
+
+  section {
+    padding: 100px 20px;
+  }
+
+  .home .media-icons {
+    right: 15px;
+  }
+
+  header .navigation {
+    display: none;
+  }
+}
