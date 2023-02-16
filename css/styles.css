@@ -79,18 +79,6 @@ section {
 }
 
 
-/*
-.character_menu a {
-  border-radius: 2px;
-  padding: 2px 13px;
-  background-color: #1680ac;
-  margin-top: 5px;
-  margin-left: 30px;
-  text-decoration: none;
-  color: #fff;
-}
-*/
-
 /*Defines what the center home element will look like on the webpage.*/
 .home {
   position: relative;
@@ -122,34 +110,17 @@ section {
   background-position: center;
   overflow: hidden;
   /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
-  
-}
-
-/*the background container for the map page*/
-.home-map {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
-
 }
 
 
-/* Styling for the items inside home.*/
+
+
+/*----------------------------------------------------CSS for Home.------------------------------------------*/
 .home .content {
   z-index: 888;
   color: #fff;
   width: 70%;
   margin-top: 50px;
-  
 }
 
 .home .content h1 {
@@ -168,7 +139,6 @@ section {
 
 .home .content p {
   margin-bottom: 65px;
-  
 }
 
 .home .content p:first-of-type {
@@ -199,7 +169,7 @@ section {
   transform: scale(1.1);
 }
 
-/*Sets up stuff for the media icons*/
+/*-----------------------------------------------------CSS for media icons------------------------------------------------------*/
 /*all of the stuff about media icons had .home before it but I decided to have a different background for each page and to make CSS easier lowered the specificity of the CSS*/
 .media-icons {
   z-index: 888;
@@ -225,45 +195,15 @@ section {
   transform: scale(1.3);
 }
 
-.character-menu {
-  z-index: 1050;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  width: 20%;
-  align-items: left;
 
-}
-
-.character-menu a {
-  font-size: 1.27em;
-  margin: 20px;
-  text-decoration: none;
-  color: #fff;
-
-}
-
-/*
-.gallery {
-  z-index: 800;
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
-  justify-content: center;
-  width: 100%;
-  overflow: auto;
-  padding-top: 10px;
-}
-*/
-
+/*-----------------------------------------------------------CSS for Gallery---------------------------------------------------------*/
 .gallery {
   z-index: 800;
   display: grid;
   grid-template-columns: repeat(auto-fit, 170px);
   grid-auto-rows: 170px;
   gap: 45px;
-  
+  padding-right: 40px;
 }
 
 .gallery .photo img {
@@ -271,12 +211,6 @@ section {
   height: 100%;
   object-fit: cover;
   border-radius: 2%;
-}
-.photo img {
-  /*width: 170px;
-  height: 170px;
-  margin: 15px 14px;
-  border-radius: 2%;*/
 }
 
 .photo {
@@ -297,19 +231,15 @@ section {
   width: 100%;
 }
 
-/*CSS for individual Character Pages*/
+/*-----------------------------------------------------CSS for individual Character Pages--------------------------------------------------*/
 .home-char {
   position: relative;
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: space-between;
-  align-items: center;  
-  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  align-items: center;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
   
 }
 
@@ -324,7 +254,6 @@ section {
   border-radius: 10px;
   overflow: auto;
   max-height: 530px;
-  
 }
 
 .char-name {
@@ -390,17 +319,33 @@ section {
   background: #555; 
 }
 
-/*.home, .home-character, .home-map, .home-char {
-  animation: backgroundIn 0.85s ease;
-}
-*/
 
-.content, .media-icons, .gallery, .character-menu, svg, .char-name, .extra-info {
+/*Content animation*/
+.content, .media-icons, .gallery, svg, .char-name, .extra-info, .pin{
   animation: transitionIn 0.7s ease;
+}
+
+/*-------------------------------------------------------Beginning of CSS for the Locations Page--------------------------------------------------*/
+/*the background container for the map page*/
+.home-map {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
 }
 
 svg {
   width: 100%;
+  height: 100%;
+  position: relative;
 }
 
 .nathair-map {
@@ -445,13 +390,8 @@ svg {
   transition: fill 0.5s ease;
 }
 
-.nathair-map:hover,
-.water-map:hover,
-.earth-map:hover,
-.wind-map:hover,
-.azores-map:hover,
-.other-map:hover,
-.bear-map:hover {
+.nathair-map:hover,.water-map:hover,.earth-map:hover,.wind-map:hover,.azores-map:hover,.other-map:hover,.bear-map:hover 
+{
   fill: #ffd780;
 }
 
@@ -511,8 +451,8 @@ svg {
 
 .full-img img {
   width: 90%;
-  height: 50%;
-  max-width: 500px;
+  height: 60%;
+  max-width: 700px;
 }
 
 .full-img span {
@@ -529,22 +469,348 @@ svg {
   transform: scale(1.2);
 }
 
-/*.reel {
-	margin-top: 15px;
-	-webkit-box-shadow: #FFFFFF 4px 4px 0 0;
-	-webkit-transition: all 0.1s cubic-bezier(0, 0, 0.25, 1);
-	border: 1px solid #FFFFFF;
-	box-shadow: #FFFFFF 4px 4px 0 0;
-	display: block;
-	padding: 20px;
-	text-align: center;
-	text-transform: uppercase;
-	padding: 10px;
-	width: 140px;
-	margin-left: auto;
-	margin-right: auto;
+.reference{
+  position: relative;
 }
-*/
+
+.pin {
+  background: #4362f8;
+  position: absolute;
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+}
+
+.pin::before {
+  content: '';
+  background: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: pulse 1.3s ease-in-out infinite;
+}
+
+.pin span {
+  display: inline-block;
+  white-space: nowrap;
+  position: absolute;
+  left: 1.5em;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  border-radius: 3em;
+  padding: 0.3em 0.6em;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #1680ac;
+  transition: all 0.2s ease-in-out;
+}
+/*Name of Place*/
+.place1 {
+  top: 75%;
+  left:7%;
+}
+.place1 span {
+  top:-250%;
+  left: -1250%;
+}
+
+/*Bellymena*/
+.place2 {
+  top: 37%;
+  left: 13%;
+}
+.place2 span {
+  top: -250%;
+  left: -410%;
+}
+
+/*Name of Place*/
+.place3 {
+  top:16%;
+  left:32%;
+}
+.place3 span {
+  top: -250%;
+  left: -650%;
+}
+
+/*Acrine*/
+.place4 {
+  top:34%;
+  left: 23%;
+}
+.place4 span{
+  top: -250%;
+  left: -350%;
+}
+
+/*Name of Place*/
+.place5 {
+  top:51%;
+  left: 22%;
+}
+.place5 span{
+  top: -250%;
+  left: -1250%;
+}
+
+/*Name of Place*/
+.place6 {
+  top:57.9%;
+  left: 19.5%;
+}
+.place6 span{
+  top: 100%;
+  left: -1650%;
+}
+
+/*Name of Place*/
+.place7 {
+  top: 52.5%;
+  left: 25.6%;
+}
+
+/*Name of Place*/
+.place8{
+  top:64%;
+  left: 22%;
+}
+.place8 span{
+  top: 350%;
+  left: -1300%;
+}
+
+/*Halivarra*/
+.place9 {
+  top:62.9%;
+  left: 25%;
+}
+
+/*Name of Place*/
+.place10 {
+  top:75.5%;
+  left:26.4%;
+}
+.place10 span{
+  top: 200%;
+  left: -1650%;
+}
+
+/*Name of Place*/
+.place11 {
+  top:72%;
+  left: 29%;
+}
+.place11 span{
+  top: -250%;
+  left: 50%;
+}
+
+/*Name of Place*/
+.place12{
+  top:79%;
+  left:29%;
+}
+.place12 span{
+  top: 290%;
+  left: -1600%;
+}
+
+/*Name of Place*/
+.place13 {
+  top: 75.4%;
+  left: 32%;
+}
+.place13 span{
+  top: -200%;
+  left: -200%;
+}
+
+/*Name of Place*/
+.place14{
+  top:84%;
+  left:31.4%;
+}
+.place14 span{
+  top: 250%;
+  left: -1600%;
+}
+
+/*Name of Place*/
+.place15 {
+  top:78%;
+  left:36%;
+}
+
+/*Name of Place*/
+.place16 {
+  top:87%;
+  left:36%;
+}
+.place16 span {
+  top: 350%;
+  left: -270%;
+}
+
+/*Name of Place*/
+.place17{
+  top: 30%;
+  left: 32%;
+}
+.place17 span{
+  top: -270%;
+  left: -200%;
+}
+
+/*Plainsfield*/
+.place18{
+  top: 56%;
+  left: 40%;
+}
+
+/*Name of Place*/
+.place19{
+  top:82%;
+  left:43%;
+}
+.place19 span{
+  top: 350%;
+  left: -700%;
+}
+
+/*Name of Place*/
+.place21 {
+  top: 37%;
+  left: 53%;
+}
+.place21 span{
+  top: -270%;
+  left: -500%;
+}
+
+/*Name of Place*/
+.place22{
+  top: 56%;
+  left: 56%;
+}
+.place22 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place23{
+  top: 77%;
+  left: 55%;
+}
+.place23 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place24{
+  top: 92%;
+  left: 60%;
+}
+.place24 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place25{
+  top: 25%;
+  left: 75%;
+}
+.place25 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place26{
+  top: 47%;
+  left: 67.5%;
+}
+.place26 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place27{
+  top: 65%;
+  left: 67.5%;
+}
+.place27 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place28{
+  top: 80%;
+  left: 65%;
+}
+.place28 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place29{
+  top: 9%;
+  left: 83.5%;
+}
+.place29 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place30{
+  top: 50%;
+  left: 81.7%;
+}
+.place30 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place31{
+  top: 73.5%;
+  left: 78%;
+}
+.place31 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place32{
+  top: 34%;
+  left: 94.5%;
+}
+.place32 span{
+  top: -270%;
+  left: -600%;
+}
+
+/*Name of Place*/
+.place33{
+  top: 60%;
+  left: 90%;
+}
+.place33 span{
+  top: -270%;
+  left: -600%;
+}
 
 @keyframes transitionIn {
   from {
