@@ -6,7 +6,16 @@
 padding: 0;
 margin: 0;
 box-sizing: border-box;
+}
 
+:root {
+  --unmarked-clr: #e6e6e6;
+  --nathair-clr: #5f8dd3;
+  --azores-clr: #ff8080;
+  --wind-color: #afdde9;
+  --earth-clr: #8dd35f;
+  --water-clr: #87aade;
+  --bear-clr: #aaccff;
 }
 
 /*This sets up the heading for the website which contains the logo on the left and the navigation items on the right. The postion of the logo and the navigation bar is set in the header container through flex.*/
@@ -210,27 +219,27 @@ section {
   overflow: auto;
 }
 
-.gallery .photo img {
+.gallery .tile img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 2%;
 }
 
-.photo {
+button.tile {
   cursor: pointer;
   background: none;
   border: none;
   transition: transform 0.3s ease, border 0.4s ease;
 }
 
-.photo:hover {
+button.tile:hover {
   transform: scale(1.2);
   border: 3px solid #fff;
   border-radius: 2%;
 }
 
-.desc {
+.tile .description {
   display: flex;
   position: relative;
   justify-content: center;
@@ -255,6 +264,7 @@ section {
   flex-direction: column;
   color: rgb(240, 240, 240);
   transition: 200ms ease-in-out;
+  font-family: poppins;
   z-index: 2050;
 }
 
@@ -346,17 +356,81 @@ section {
   transform: translateX(-50%);
 }
 
+/* The start of the carousel buttons */
+.carousel-button-left, .carousel-button-right {
+  position: absolute;
+  font-size: 5rem;
+  transform: translateY(-50%);
+  top: 50%;
+  background: none;
+  border: none;
+  color: white;
+
+  transition: transform 0.1s ease-in-out;
+}
+
+.carousel-button-left:hover, .carousel-button-right:hover{
+  transform: translateY(-50%) scale(1.3) ;
+  cursor: pointer;
+}
+
+.carousel-button-left:active, .carousel-button-right:active{
+  transform: translateY(-50%) scale(0.7) ;
+}
+
+.carousel-button-left {
+  left: -1.5em;
+}
+
+.carousel-button-right {
+  right: -1.5em;
+}
+
 .modal-body {
+  position: relative;
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  height: 100%;
+  height: 79%;
 }
+
+.modal ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.modal .slide {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  padding-left: 20px;
+  height: 100%;
+  width: 100%;
+  inset: 0;
+  font-family: poppins;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  z-index: 1;
+  opacity: 0;
+
+  transition: opacity 0.25s ease-in-out
+}
+
+.modal .slide[data-active]{
+  opacity: 1;
+  z-index: 3;
+}
+
 
 .modal-left {
 width: 30%;
 display: flex;
-padding-left: 10px;
+}
+
+.location-left {
+  width: 60%;
 }
 
 .modal-left img {
@@ -365,19 +439,28 @@ padding-left: 10px;
   border-radius: 10px;
 }
 
+.location-left img {
+  width: 100%;
+}
+
 .modal-right {
   padding-left: 20px;
   padding-right: 20px;
-  height: 76.9%;
+  height: 100%;
   width: 60%;
   overflow: auto;
-  font-family: poppins !important;
-  font-size: 1.1em;
-  line-height: 1.2em;
+}
+
+.location-right {
+  width: 40%;
 }
 
 .modal-right p {
   margin-bottom: 20px;
+}
+
+.page3 img {
+  margin-inline: auto;
 }
 
 #overlay {
@@ -399,74 +482,6 @@ padding-left: 10px;
   backdrop-filter: blur(15px);
 }
 
-/*-----------------------------------------------------CSS for individual Character Pages--------------------------------------------------*/
-/*.home-char {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  
-}
-
-.home-char .content {
-  z-index: 888;
-  color: #fff;
-  width: 60%;
-  margin-top: 50px;
-  backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,.3);
-  padding: 30px 25px;
-  border-radius: 10px;
-  overflow: auto;
-  max-height: 530px;
-}
-
-.char-name {
-  font-size: 4em;  
-  font-weight: 900;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 75px;
-  margin-bottom: 40px;
-  position: absolute;
-  top: 2em;
-  left: 3.2em;
-}
-
-.extra-info span {
-  font-weight: 700;
-}
-
-.extra-info {
-  position: absolute;
-  color: #fff;
-  top: 12.5em;
-  left: 12.8em;
-  display: flex;
-  justify-content: space-between;
-  width: 47%;
-}
-
-.home-char .content p {
-  font-family: poppins;
-  font-size: 1.2em;
-  line-height: 1.2em;
-  margin: 0px 15px 35px;
- 
-}
-
-.char-pic {
-  width: 30%;
-  height: 30%;
-  margin-top: 50px;
-  border-radius: 10px;
-  animation: picIn 0.7s ease;
-}*/
-
 /* width */
 ::-webkit-scrollbar {
   padding-top: 60px;
@@ -475,19 +490,19 @@ padding-left: 10px;
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #888; 
+  background: #797979; 
+  border-radius: 16px;
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color:#babac0;
   border-radius:16px;
-  border:4px solid #fff; 
+  border:4px solid #f1f1f1; 
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #f1f1f1; 
+  border-color: #fff; 
 }
 
 
@@ -520,43 +535,43 @@ svg {
 }
 
 .nathair-map {
-  fill: #5f8dd3;
+  fill: var(--nathair-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .bear-map {
-  fill: #aaccff;
+  fill: var(--bear-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .water-map {
-  fill: #87aade;
+  fill: var(--water-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .earth-map {
-  fill: #8dd35f;
+  fill: var(--earth-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .wind-map {
-  fill: #afdde9;
+  fill: var(--wind-color);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .azores-map {
-  fill: #ff8080;
+  fill: var(--azores-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
 
 .other-map {
-  fill: #e6e6e6;
+  fill: var(--unmarked-clr);
   cursor: pointer;
   transition: fill 0.5s ease;
 }
@@ -593,25 +608,7 @@ svg {
   visibility: visible;
   transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s;
 }
-/*
-.default { 
-  opacity: 0;
-  visibility: hidden;
-  top: -10px; 
-  transition-duration: 200ms, 0; 
-  transition-property: opacity, visibility; 
-  transition-delay: 0, 200ms; 
-}
 
-.hidden { 
-  opacity: 1;
-  visibility: visible;
-  top: 0px;
-  transition-duration: 200ms, 0;
-  transition-property: opacity, visibility;
-  transition-delay: 200ms, 0; 
-}
-*/
 .full-img .name {
   position: absolute;
   top: 10%;
@@ -644,11 +641,16 @@ svg {
   position: relative;
 }
 
+.map-pins {
+  z-index: 1;
+  isolation: isolate;
+}
+
 .pin {
   background: #4362f8;
   position: absolute;
-  width: 0.7em;
-  height: 0.7em;
+  width: 0.5em;
+  height: 0.5em;
   border-radius: 50%;
 }
 
@@ -663,6 +665,21 @@ svg {
   height: 100%;
   border-radius: 50%;
   animation: pulse 1.3s ease-in-out infinite;
+  z-index: -3;
+}
+
+.pin::after {
+  background: black;
+  border: 1px solid white;
+  position: absolute;
+  transform: translateY(-50%) rotate(0deg);
+  transform-origin: 0 50%;
+  width: 10px;
+  height: 1px;
+  top: 50%;
+  left: 50%;
+  border-radius: 1.2em;
+  z-index: -1;
 }
 
 .pin span {
@@ -672,6 +689,7 @@ svg {
   left: 1.5em;
   top: 50%;
   transform: translateY(-50%);
+  font-family: cinzel;
   background: #fff;
   border-radius: 3em;
   padding: 0.3em 0.6em;
@@ -680,67 +698,68 @@ svg {
   color: #1680ac;
   transition: all 0.2s ease-in-out;
 }
-/*Name of Place*/
+
+/*Miokosu*/
 .place1 {
-  top: 75%;
-  left:7%;
+  top: 78%;
+  left:8%;
 }
 .place1 span {
   top:-250%;
-  left: -1250%;
+  left: -360%;
 }
 
-/*Bellymena*/
+/*Anuzan*/
 .place2 {
   top: 37%;
   left: 13%;
 }
 .place2 span {
   top: -250%;
-  left: -410%;
+  left: -300%;
 }
 
-/*Name of Place*/
+/*Nagawa*/
 .place3 {
   top:16%;
   left:32%;
 }
 .place3 span {
   top: -250%;
-  left: -650%;
+  left: -304%;
 }
 
-/*Acrine*/
+/*Naki*/
 .place4 {
   top:34%;
   left: 23%;
 }
 .place4 span{
   top: -250%;
-  left: -350%;
+  left: -210%;
 }
 
-/*Name of Place*/
+/*Kaida*/
 .place5 {
   top:51%;
   left: 22%;
 }
 .place5 span{
   top: -250%;
-  left: -1250%;
+  left: -259%;
 }
 
-/*Name of Place*/
+/*Chibetsu*/
 .place6 {
   top:57.9%;
   left: 19.5%;
 }
 .place6 span{
   top: 100%;
-  left: -1650%;
+  left: -928%;
 }
 
-/*Name of Place*/
+/*Uzuman*/
 .place7 {
   top: 52.5%;
   left: 25.6%;
@@ -762,7 +781,7 @@ svg {
   left: 25%;
 }
 
-/*Name of Place*/
+/*Greenhollow*/
 .place10 {
   top:75.5%;
   left:26.4%;
@@ -771,8 +790,13 @@ svg {
   top: 200%;
   left: -1650%;
 }
+.place10::after {
+  content: '';
+  width: 30px;
+  transform: translateY(-50%) rotate(154deg);
+}
 
-/*Name of Place*/
+/*Westerdale*/
 .place11 {
   top:72%;
   left: 29%;
@@ -782,7 +806,7 @@ svg {
   left: 50%;
 }
 
-/*Name of Place*/
+/*Mallowbeach*/
 .place12{
   top:79%;
   left:29%;
@@ -792,7 +816,7 @@ svg {
   left: -1600%;
 }
 
-/*Name of Place*/
+/*Ballymena*/
 .place13 {
   top: 75.4%;
   left: 32%;
@@ -812,13 +836,13 @@ svg {
   left: -1600%;
 }
 
-/*Name of Place*/
+/*Belltown*/
 .place15 {
   top:78%;
   left:36%;
 }
 
-/*Name of Place*/
+/*Rivershear*/
 .place16 {
   top:87%;
   left:36%;
@@ -828,14 +852,14 @@ svg {
   left: -270%;
 }
 
-/*Name of Place*/
+/*Kushika*/
 .place17{
   top: 30%;
-  left: 32%;
+  left: 35.5%;
 }
 .place17 span{
   top: -270%;
-  left: -200%;
+  left: -342%;
 }
 
 /*Plainsfield*/
@@ -843,8 +867,12 @@ svg {
   top: 56%;
   left: 40%;
 }
+.place18 span{
+  top: -272%;
+  left: -469%;
+}
 
-/*Name of Place*/
+/*Redwallow*/
 .place19{
   top:82%;
   left:43%;
@@ -854,7 +882,7 @@ svg {
   left: -700%;
 }
 
-/*Name of Place*/
+/*Capitol City*/
 .place21 {
   top: 37%;
   left: 53%;
@@ -864,7 +892,7 @@ svg {
   left: -500%;
 }
 
-/*Name of Place*/
+/*Newwind*/
 .place22{
   top: 56%;
   left: 56%;
@@ -874,24 +902,24 @@ svg {
   left: -600%;
 }
 
-/*Name of Place*/
+/*Chemsisi*/
 .place23{
   top: 77%;
   left: 55%;
 }
 .place23 span{
   top: -270%;
-  left: -600%;
+  left: -352%;
 }
 
-/*Name of Place*/
+/*Makoso*/
 .place24{
   top: 92%;
   left: 60%;
 }
 .place24 span{
   top: -270%;
-  left: -600%;
+  left: -348%;
 }
 
 /*Name of Place*/
@@ -924,14 +952,14 @@ svg {
   left: -600%;
 }
 
-/*Name of Place*/
+/*Mangi*/
 .place28{
   top: 80%;
   left: 65%;
 }
 .place28 span{
   top: -270%;
-  left: -600%;
+  left: -268%;
 }
 
 /*Name of Place*/
