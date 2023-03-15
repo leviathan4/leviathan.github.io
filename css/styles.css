@@ -6,7 +6,10 @@
 padding: 0;
 margin: 0;
 box-sizing: border-box;
+scroll-behavior: smooth;
 }
+
+
 
 :root {
   --unmarked-clr: #e6e6e6;
@@ -30,7 +33,7 @@ header {
   justify-content: space-between;
   padding: 15px 200px;
   backdrop-filter: blur(5px);
-  background-image: linear-gradient(to bottom, rgba(51,51,51,1) 0%, rgba(0,0,0,0) 85%)
+  background-image: linear-gradient(to bottom, rgb(17, 17, 17) 0%, rgba(0,0,0,0) 100%)
 }
 
 /*CSS for the logo located on the left and the navigation menu on the right.*/
@@ -64,7 +67,7 @@ header .navigation {
   background: #fff;
   width: 0;
   height: 3px;
-  bottom: 0;
+  bottom: -7px;
   left: 0;
   transition: width 0.3s ease;
 }
@@ -143,9 +146,44 @@ section {
 }
 
 .home .content h1 span {
-  font-size: 1.27em;
+  font-size: 2em;
   font-weight: 900;
 }
+
+.background-bar {
+  position: absolute;
+  background-image: url(../images/valley_monolith_by_tacticsogre_d8kisxo.jpg);
+  background-size: cover;
+  background-position: center;
+  min-height: 70vh;
+  width: 100vw;
+  left: 0;
+}
+
+.background-bar::after, .background-bar::before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 300px;
+  border-style: solid;
+  animation: widthIn 0.4s ease-in-out;
+}
+
+.background-bar::after {
+  border-color: white;
+  top: -20px;
+  left: 0;
+  border-width: 1px 0px 0px;
+}
+
+
+.background-bar::before{
+  border-color: white;
+  bottom: -20px;
+  right: 0;
+  border-width: 0px 0px 1px 0px;
+}
+
 
 .home .content p {
   margin-bottom: 65px;
@@ -258,7 +296,8 @@ button.tile:hover {
   border-radius: 10px;
   z-index: 100;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  width: 1050px;
+  width: 70%;
+  max-width: 1050px;
   height: 600px;
   display: flex;
   flex-direction: column;
@@ -423,22 +462,16 @@ button.tile:hover {
   z-index: 3;
 }
 
-
 .modal-left {
-width: 30%;
-display: flex;
+  display: flex;
+}
+.modal-left img {
+  border-radius: 10px;
 }
 
 .location-left {
   width: 60%;
 }
-
-.modal-left img {
-  height: 400px;
-  width: 400px;
-  border-radius: 10px;
-}
-
 .location-left img {
   width: 100%;
 }
@@ -470,7 +503,7 @@ display: flex;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(68, 68, 68, 0.8);
+  background: rgba(48, 48, 48, 0.8);
   pointer-events: none;
   transition: 250ms ease-in-out; 
   z-index: 2000;
@@ -486,12 +519,17 @@ display: flex;
 ::-webkit-scrollbar {
   padding-top: 60px;
   width: 5px;
+  
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
   background: #797979; 
   border-radius: 16px;
+}
+
+.gallery::-webkit-scrollbar-track {
+  margin-block: 25px;
 }
  
 /* Handle */
@@ -581,61 +619,6 @@ svg {
   fill: #ffd780;
 }
 
-
-.full-img {
-  z-index: 1500;
-  width: 100%;
-  height: 100vh;
-  background: rgba(0,0,0,.8);
-  position: fixed;
-  left: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0;
-  top: -40px;
-  visibility: hidden;
-  transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s;
-}
-
-.hidden {
-  backdrop-filter: blur(5px);
-  box-shadow: 0 0 5px 10px rgba(0,0,0,.8);
-
-  opacity: 1;
-  top: 0;
-  visibility: visible;
-  transition: opacity 0.5s ease, top 0.5s ease, visibility 0.5s;
-}
-
-.full-img .name {
-  position: absolute;
-  top: 10%;
-  color:#fff;
-  font-size: 1.8em;
-  font-weight: 500;
-}
-
-.full-img img {
-  width: 90%;
-  height: 60%;
-  max-width: 700px;
-}
-
-.full-img span {
-  position: absolute;
-  top: 10%;
-  right: 5%;
-  font-size: 25px;
-  color: #fff;
-  cursor: pointer;
-  transition: transform 0.5s ease;
-}
-
-.full-img span:hover {
-  transform: scale(1.2);
-}
 
 .reference{
   position: relative;
@@ -1012,6 +995,12 @@ svg {
   left: -600%;
 }
 
+@keyframes widthIn {
+  from {
+    width: 0%;
+  }
+}
+
 @keyframes pulse {
   100% {
     opacity: 0;
@@ -1064,7 +1053,7 @@ svg {
     right: 15px;
   }
 
-  header .navigation {
+  /* header .navigation {
     display: none;
-  }
+  } */
 }

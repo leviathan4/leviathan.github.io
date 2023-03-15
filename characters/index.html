@@ -292,7 +292,7 @@
 						</div>
 					</li>
 					<li class="slide page2"></li>
-					<li class="slide page3"><img src="../images/character-stats/mikaila-ejiri-stats.png" alt=""></li>
+					<li class="slide page3"><img src="../images/character-stats/ayla-mikan-azores-stats.png" alt=""></li>
 				</ul>
 			</div>
 		</div>
@@ -324,7 +324,7 @@
 						</div>
 					</li>
 					<li class="slide page2"></li>
-					<li class="slide page3"><img src="../images/character-stats/mikaila-ejiri-stats.png" alt=""></li>
+					<li class="slide page3"><img src="../images/character-stats/emil-ejiri-stats.png" alt=""></li>
 				</ul>
 			</div>
 		</div>
@@ -353,7 +353,7 @@
 				   		<p>This is where the biography information for the charactar goes. Temporary placement for information.</p>
 					</li>
 					<li class="slide page2"></li>
-					<li class="slide page3"><img src="../images/character-stats/mikaila-ejiri-stats.png" alt=""></li>
+					<li class="slide page3"><img src="../images/character-stats/ailisa-ejiri-stats.png" alt=""></li>
 				</div>
 				</ul>
 			</div>
@@ -385,7 +385,7 @@
 						</div>
 					</li>
 					<li class="slide page2"></li>
-					<li class="slide page3"><img src="../images/character-stats/mikaila-ejiri-stats.png" alt=""></li>
+					<li class="slide page3"><img src="../images/character-stats/isabella-ibara-stats.png" alt=""></li>
 				
 				</ul>
 			</div>
@@ -482,6 +482,13 @@ function closeModal(modal) {
     if (modal == null) return
     modal.classList.remove('active')
     overlay.classList.remove('active')
+
+	const mslides = document.querySelectorAll('[data-slides]')
+	mslides.forEach(button => {
+		const activeSlide = button.querySelector('[data-active]')
+		delete activeSlide.dataset.active
+		button.children[0].dataset.active = true
+	})
 }
 
 const buttons = document.querySelectorAll('[data-carousel-button]')
@@ -499,6 +506,8 @@ buttons.forEach(button => {
         delete activeSlide.dataset.active
     })
 })
+
+
 
 </script>
 </body>
