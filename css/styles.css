@@ -8,9 +8,6 @@ margin: 0;
 box-sizing: border-box;
 scroll-behavior: smooth;
 }
-
-
-
 :root {
   --unmarked-clr: #e6e6e6;
   --nathair-clr: #5f8dd3;
@@ -20,6 +17,7 @@ scroll-behavior: smooth;
   --water-clr: #87aade;
   --bear-clr: #aaccff;
 }
+
 
 /*This sets up the heading for the website which contains the logo on the left and the navigation items on the right. The postion of the logo and the navigation bar is set in the header container through flex.*/
 header {
@@ -35,7 +33,6 @@ header {
   backdrop-filter: blur(5px);
   background-image: linear-gradient(to bottom, rgb(17, 17, 17) 0%, rgba(0,0,0,0) 100%)
 }
-
 /*CSS for the logo located on the left and the navigation menu on the right.*/
 header .logo {
   color: #fff;
@@ -45,11 +42,9 @@ header .logo {
   text-decoration: none;
   letter-spacing: .5rem;
 }
-
 header .navigation {
   position: relative;
 }
-
 /*This sets the individual styles for the items in the navigation bar.*/
 .navigation-items a {
   position: relative;
@@ -59,7 +54,6 @@ header .navigation {
   margin-left: 30px;
   font-family: cinzel;
 }
-
 /*This adds an underline to the items.*/
 .navigation-items a:before {
   content: '';
@@ -71,17 +65,14 @@ header .navigation {
   left: 0;
   transition: width 0.3s ease;
 }
-
 /*This animates the underline so that it grows from the left*/
 .navigation-items a:hover:before {
   width: 100%;
 }
-
 /*This keeps the underline present for the current page*/
 .navigation .navigation-items .active:before {
   width: 100%;
 }
-
 .navigation .navigation-items .active {
   text-shadow: 0 0 5px #fff, 0 0 5px #fff;
 }
@@ -92,7 +83,17 @@ section {
 }
 
 
+
+
+
+
+
+
+/*----------------------------------------------------CSS for Home.------------------------------------------*/
+/* CSS for the background strip on the home page */
 /*Defines what the center home element will look like on the webpage.*/
+
+
 .home {
   position: relative;
   width: 100%;
@@ -100,23 +101,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
-
-}
-
-/*the background container for the character page*/
-.home-character {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
   /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background-size: cover;
@@ -125,42 +110,18 @@ section {
   /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
 }
 
-
-
-
-/*----------------------------------------------------CSS for Home.------------------------------------------*/
-.home .content {
-  z-index: 888;
-  color: #fff;
-  width: 70%;
-  margin-top: 50px;
-}
-
-.home .content h1 {
-  font-size: 4em;
-  font-weight: 400;
-  text-transform: uppercase;
-  letter-spacing: 5px;
-  line-height: 75px;
-  margin-bottom: 40px;
-}
-
-.home .content h1 span {
-  font-size: 2em;
-  font-weight: 900;
-}
-
-.background-bar {
+.home__background-strip {
   position: absolute;
   background-image: url(../images/valley_monolith_by_tacticsogre_d8kisxo.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 70vh;
+  min-height: 70%;
   width: 100vw;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
-
-.background-bar::after, .background-bar::before {
+.home__background-strip::after, .home__background-strip::before {
   content: '';
   position: absolute;
   height: 200px;
@@ -168,54 +129,85 @@ section {
   border-style: solid;
   animation: widthIn 0.4s ease-in-out;
 }
-
-.background-bar::after {
+.home__background-strip::after {
   border-color: white;
   top: -20px;
   left: 0;
   border-width: 1px 0px 0px;
 }
-
-
-.background-bar::before{
+.home__background-strip::before{
   border-color: white;
   bottom: -20px;
   right: 0;
   border-width: 0px 0px 1px 0px;
 }
 
-
-.home .content p {
-  margin-bottom: 65px;
+/* CSS for the stuff inside the content Div */
+.home__content {
+  z-index: 888;
+  color: #fff;
+  width: 70%;
+  display: flex;
+  font-family: cinzel;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.home .content p:first-of-type {
-  backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,.3);
-  padding: 30px 25px;
-  border-radius: 10px;
-  font-family: poppins;
-  font-size: 1.2em;
-  line-height: 1.2em;
+.home__content h1 {
+  font-size: 4em;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 75px;
+  margin-bottom: 20px;
+  text-align: center;
 }
-
+.home__emphasis {
+  font-size: 2em;
+  font-weight: 900;
+}
+.home__content h2 {
+  font-size: 1.7em;
+}
 /*Creates the button for READ MORE and allows the button to grow when hovering it.*/
-.home .content a {
+.home__more-content {
   background: #fff;
-  padding: 15px 35px;
+  padding: 10px 25px;
   color: #1680ac;
   font-size: 1.1em;
   font-weight: 600;
+  font-family: poppins;
+  letter-spacing: .4rem;
   text-decoration: none;
   border-radius: 2px;
   position: relative;
   display: inline-block;
+  margin-top: 60px;
   transition: transform 0.3s ease;
 }
-
-.home .content a:hover {
+.home__more-content:hover {
   transform: scale(1.1);
 }
+
+.home2 {
+  padding: 150px 300px;
+}
+.home2 h1 {
+  font-family: cinzel;
+}
+.home2 p {
+  margin-bottom: 65px;
+}
+.home2 p:first-of-type {
+  /* backdrop-filter: blur(5px);
+  background-color: rgba(0,0,0,.3); */
+  padding: 30px 25px;
+  /* border-radius: 10px; */
+  font-family: poppins;
+  /* font-size: 1.2em;
+  line-height: 1.2em; */
+}
+
 
 /*-----------------------------------------------------CSS for media icons------------------------------------------------------*/
 /*all of the stuff about media icons had .home before it but I decided to have a different background for each page and to make CSS easier lowered the specificity of the CSS*/
@@ -245,39 +237,104 @@ section {
 
 
 /*-----------------------------------------------------------CSS for Gallery---------------------------------------------------------*/
+/*the background container for the character page*/
+.home-character {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+}
+
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.gallery-tabs li {
+  list-style: none;
+  padding: 5px 20px;
+  font-family: cinzel;
+  font-size: 1em;
+  font-weight: 400;
+  color: white;
+  border: 1px solid white;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin-inline: 10px;
+  background-color: none;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.gallery-tabs .active {
+  color: black;
+  background-color: white;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+}
+
 .gallery {
   width: 90%;
+  height: 90%;
   z-index: 800;
   display: grid;
   grid-template-columns: repeat(auto-fit, 170px);
   grid-auto-rows: 170px;
   gap: 45px;
   margin: 0 auto;
-  padding: 25px;
   overflow: auto;
-}
 
-.gallery .tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 2%;
 }
-
-button.tile {
+.gallery__tile {
   cursor: pointer;
   background: none;
   border: none;
-  transition: transform 0.3s ease, border 0.4s ease;
+  transition: all 0.3s ease-in-out;
 }
 
-button.tile:hover {
+.gallery__tile.show {
+  animation: show .3s ease-in-out 0s 1 forwards;
+  transform-origin: center;
+  
+}
+.gallery__tile.hide {
+  animation: hide .3s ease-in-out 0s 1 forwards;
+  transform-origin: center;
+}
+
+.gallery__tile div:first-child {
+  overflow: hidden;
+  border-radius: 5%;
+}
+
+.gallery__tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5%;
+  
+  transition: transform 0.3s ease;
+}
+
+.gallery__tile img:hover {
   transform: scale(1.2);
-  border: 3px solid #fff;
-  border-radius: 2%;
 }
 
-.tile .description {
+.gallery__description {
   display: flex;
   position: relative;
   justify-content: center;
@@ -286,6 +343,7 @@ button.tile:hover {
   font-family: cinzel;
   font-size: 1.2em;
 }
+
 
 /*-------------------------------Modals for Characters-----------------------------------*/
 .modal {
@@ -545,7 +603,7 @@ button.tile:hover {
 
 
 /*Content animation*/
-.content, .media-icons, .gallery, svg, .char-name, .extra-info, .pin{
+.content, .media-icons, .gallery, svg, .char-name, .extra-info, .pin, .gallery-tabs{
   animation: transitionIn 0.7s ease;
 }
 
@@ -564,6 +622,7 @@ button.tile:hover {
   background-position: center;
   overflow: hidden;
   /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+  padding-inline: 270px;
 }
 
 svg {
@@ -635,6 +694,7 @@ svg {
   width: 0.5em;
   height: 0.5em;
   border-radius: 50%;
+  pointer-events: none;
 }
 
 .pin::before {
@@ -649,6 +709,7 @@ svg {
   border-radius: 50%;
   animation: pulse 1.3s ease-in-out infinite;
   z-index: -3;
+  pointer-events: none;
 }
 
 .pin::after {
@@ -663,6 +724,7 @@ svg {
   left: 50%;
   border-radius: 1.2em;
   z-index: -1;
+  pointer-events: none;
 }
 
 .pin span {
@@ -680,6 +742,7 @@ svg {
   font-weight: 700;
   color: #1680ac;
   transition: all 0.2s ease-in-out;
+  pointer-events: none;
 }
 
 /*Miokosu*/
@@ -993,6 +1056,64 @@ svg {
 .place33 span{
   top: -270%;
   left: -600%;
+}
+
+/* ----------------------CSS for Spirits Section----------------------- */
+.spirits {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+}
+
+/* ------------------------------CSS for Story Arcs Section----------------------------- */
+.story-arcs {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
+}
+
+@keyframes hide {
+  0%{
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  
+  }
+}
+
+@keyframes show {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+    
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
 @keyframes widthIn {
