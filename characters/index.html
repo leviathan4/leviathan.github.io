@@ -465,6 +465,7 @@
 <!------------------------------------------------End of Blank Modal Page---------------------------------->
 <script>
 
+//Javascript that controls the opening and closing of modals for the character gallery
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
 const overlay = document.getElementById('overlay')
@@ -494,6 +495,7 @@ function closeModal(modal) {
     modal.classList.remove('active')
     overlay.classList.remove('active')
 
+	//Resets all of the slides to the first one when the modal is closed
 	const mslides = document.querySelectorAll('[data-slides]')
 	mslides.forEach(button => {
 		const activeSlide = button.querySelector('[data-active]')
@@ -502,6 +504,7 @@ function closeModal(modal) {
 	})
 }
 
+//Javascript that controls the ability to use arrows tabs to slide through more information in the modal
 const buttons = document.querySelectorAll('[data-carousel-button]')
 
 buttons.forEach(button => {
@@ -518,6 +521,7 @@ buttons.forEach(button => {
     })
 })
 
+//Javascript that allows the gallery page to filter based on selection
 const gallery = document.querySelector(".gallery-tabs")
 const galleryTile = document.querySelectorAll('.gallery__tile')
 
@@ -548,6 +552,7 @@ console.log(gallery)
 			})
 		}
 	})
+
 </script>
 </body>
 </html>
