@@ -125,7 +125,7 @@ section {
   background-image: url(../images/valley_monolith_by_tacticsogre_d8kisxo.jpg);
   background-size: cover;
   background-position: center;
-  min-height: 70%;
+  min-height: 70vh;
   width: 100vw;
   left: 0;
   top: 50%;
@@ -1185,6 +1185,22 @@ svg {
 }
 
 @media (max-width: 480px) {
+  .home2 {
+    padding: 100px 20px;
+  }
+  .home__content h1 {
+    font-size: 1.7rem;
+    line-height: 35px;
+  }
+
+  .home__emphasis {
+    font-size: 3rem;
+  }
+
+  .home__content h2 {
+    font-size: 1.2rem;
+  }
+
   .hamburger {
     height: 45px;
     width: 45px;
@@ -1260,7 +1276,11 @@ svg {
   }
 
   .home-character {
-    padding-right: 0px; 
+    padding-right: 5px; 
+  }
+
+  .gallery-tabs {
+    margin-bottom: 10px;
   }
 
   .gallery-tabs li{
@@ -1269,18 +1289,20 @@ svg {
   }
 
   .gallery {
-    grid-template-columns: repeat(auto-fit, 130px);
-    grid-auto-rows: 130px;
-    margin-right: 7px;  
+    grid-template-columns: repeat(auto-fit, 120px);
+    grid-auto-rows: 120px;
+    margin-right: 7px; 
+    height: 83%; 
+
   }
 
   .modal {
     width: 100%;
     height: 100%;
   }
-.modal-header .close-button {
-  z-index: 500;
-}
+  .modal-header .close-button {
+    z-index: 500;
+  }
   .modal-header .title {
     font-size: 2rem;
     line-height: 50px;
@@ -1300,4 +1322,10 @@ svg {
     width: 100%;
   }
 
+  .home-map {
+    padding: 100px 20px;
+  }
+  .map-pins span{
+  display: none;
+  }
 }

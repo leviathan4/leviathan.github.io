@@ -10,20 +10,28 @@
 </head>
 
 <body>
-  	<header>
-		<a href="#" class="logo">Leviathan</a>
-		<nav class="navigation">
-				<div class="navigation-items">
-					<a href="index.html" class="active">Home</a>
-					<a href="characters/index.html">Characters</a>
-					<a href="locations/index.html">Map</a>
-					<a href="spirits/index.html">Spirits</a>
-					<a href="story_arcs/index.html">Story Arcs</a>
-				</div>
-		</nav>
-  	</header>
+	<header>
+		<div class="header-container">
+			  <a href="#" class="logo">Leviathan</a>
 
-  	<section class="home">
+			<nav class="navigation">
+				<div class="navigation-items">
+					  <a href=#home-page class="active">Home</a>
+					  <a href="../characters/index.html">Characters</a>
+					  <a href="../locations/index.html">Map</a>
+					  <a href="../spirits/index.html">Spirits</a>
+					  <a href="../story-arcs/index.html">Story Arcs</a>
+				</div>	 
+
+				<div class="hamburger">
+					<div class="bar"></div>
+				</div>
+			</nav>
+
+		</div>
+	</header>
+
+  	<section id="home-page" class="home">
 		<div class="home__background-strip"></div>
 		<div class="home__content">
 			<h1>The World of</h1>
@@ -48,5 +56,24 @@
 			</p>
 	</section>
 
+<script>
+const hamburger = document.querySelector('.hamburger')
+const mobileMenu = document.querySelector('.navigation-items')
+const menuItem = document.querySelectorAll('.navigation-items a')
+const header = document.querySelector('.header-container')
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active')
+	mobileMenu.classList.toggle('active')
+})
+
+menuItem.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active')
+		mobileMenu.classList.toggle('active')
+	})
+})
+
+</script>
 </body>
 </html>

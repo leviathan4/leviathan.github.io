@@ -10,20 +10,28 @@
 </head>
 
 <body>
-	<header>
-		<a href="#" class="logo">Leviathan</a>
-		<nav class="navigation">
-				<div class="navigation-items">
-					<a href="../index.html">Home</a>
-					<a href="../characters/index.html">Characters</a>
-					<a href="index.html" class="active">Map</a>
-					<a href="../spirits/index.html">Spirits</a>
-					<a href="../story_arcs/index.html">Story Arcs</a>
-				</div>
-		</nav>
-	  </header>
+   <header>
+		<div class="header-container">
+			  <a href="#" class="logo">Leviathan</a>
 
-<section class="home-map">
+			<nav class="navigation">
+				<div class="navigation-items">
+					  <a href="../index.html">Home</a>
+					  <a href="../characters/index.html">Characters</a>
+					  <a href=#home-location class="active">Map</a>
+					  <a href="../spirits/index.html">Spirits</a>
+					  <a href="../story-arcs/index.html">Story Arcs</a>
+				</div>	 
+
+				<div class="hamburger">
+					<div class="bar"></div>
+				</div>
+			</nav>
+
+		</div>
+	</header>
+
+<section id=#home-location class="home-map">
    
    <div class="reference">
       <svg
@@ -1044,6 +1052,23 @@
 <div id="overlay"></div>
 
 <script>
+const hamburger = document.querySelector('.hamburger')
+const mobileMenu = document.querySelector('.navigation-items')
+const menuItem = document.querySelectorAll('.navigation-items a')
+const header = document.querySelector('.header-container')
+
+hamburger.addEventListener('click', () => {
+	hamburger.classList.toggle('active')
+	mobileMenu.classList.toggle('active')
+})
+
+menuItem.forEach((item) => {
+	item.addEventListener('click', () => {
+		hamburger.classList.toggle('active')
+		mobileMenu.classList.toggle('active')
+	})
+})
+
 //Javacript for changing the name bubbles when hovering over them
 const province = Array.from(document.querySelectorAll('[data-map-location]'))
 const mapNames = Array.from(document.querySelectorAll('.map-pins span'))
