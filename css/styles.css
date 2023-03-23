@@ -20,18 +20,27 @@ scroll-behavior: smooth;
 
 
 /*This sets up the heading for the website which contains the logo on the left and the navigation items on the right. The postion of the logo and the navigation bar is set in the header container through flex.*/
+
 header {
   z-index: 999;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  height: 55px;
   padding: 15px 200px;
   backdrop-filter: blur(5px);
   background-image: linear-gradient(to bottom, rgb(17, 17, 17) 0%, rgba(0,0,0,0) 100%)
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
 }
 /*CSS for the logo located on the left and the navigation menu on the right.*/
 header .logo {
@@ -42,9 +51,10 @@ header .logo {
   text-decoration: none;
   letter-spacing: .5rem;
 }
-header .navigation {
-  position: relative;
+.hamburger {
+  display: none;
 }
+
 /*This sets the individual styles for the items in the navigation bar.*/
 .navigation-items a {
   position: relative;
@@ -1175,6 +1185,77 @@ svg {
 }
 
 @media (max-width: 480px) {
+
+  
+  .hamburger {
+    height: 45px;
+    width: 45px;
+    display: inline-block; 
+    border: 1px solid #fff;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transform: scale(.8);
+  }
+
+  .bar {
+    height: 1px;
+    width: 22.5px;
+    position: relative;
+    background-color: #fff;
+  }
+
+  .bar::after, .bar::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    transition: 0.3s ease-in-out;
+    transition-property: top, bottom;
+  }
+
+  .bar::after {
+    top: 8px;
+  }
+
+  .bar::before {
+    bottom: 8px;
+  }
+
+  .hamburger.active .bar::before {
+    bottom: 0px;
+  }
+
+  .hamburger.active .bar::after {
+    top: 0px;
+  }
+
+  .navigation-items {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 100%;
+    top: 0;
+    background-color: rgb(31, 30, 30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .3s ease-in-out;
+  }
+
+  .navigation-items.active {
+    left: 0;
+  }
+
+  .navigation-items a {
+    margin: 10px;
+    font-size: 2em;
+  }
 
   .media-icons {
     display: none;
