@@ -1185,8 +1185,6 @@ svg {
 }
 
 @media (max-width: 480px) {
-
-  
   .hamburger {
     height: 45px;
     width: 45px;
@@ -1265,10 +1263,10 @@ svg {
     padding-right: 0px; 
   }
 
-.gallery-tabs li{
+  .gallery-tabs li{
   padding: 5px 10px;
   margin-bottom: 10px;
-}
+  }
 
   .gallery {
     grid-template-columns: repeat(auto-fit, 130px);
@@ -1280,4 +1278,26 @@ svg {
     width: 100%;
     height: 100%;
   }
+.modal-header .close-button {
+  z-index: 500;
+}
+  .modal-header .title {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+
+  .modal .slide {
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+  .modal-left {
+    justify-content: center;
+    height: 30%;
+    margin-bottom: 15px;
+  }
+  .modal-right {
+    width: 100%;
+  }
+
 }
