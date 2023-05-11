@@ -48,9 +48,9 @@
 		
 				<div class="gallery">
 
-				<button class="gallery__tile azores-group aria-group" data-modal-target="#mikaila-ejiri"> 
-					<div><img src="../images/character-images/kid-mikaela1.png" alt="Mikaila Ejiri"></div>
-					<div class="gallery__description">Mikaila Ejiri</div>
+				<button class="gallery__tile azores-group aria-group" data-modal-target="#mikayla-ejiri"> 
+					<div><img src="../images/character-images/kid-mikayla1.png" alt="Mikayla Ejiri"></div>
+					<div class="gallery__description">Mikayla Ejiri</div>
 				</button>
 
 				<button class="gallery__tile makani-group" data-modal-target="#carter-easton">
@@ -198,10 +198,10 @@
 		</section>
 
 		<div id="overlay"></div>
-<!----------------------------------------Mikaila Ejiri------------------------------------------->
-		<div class="modal" id="mikaila-ejiri">
+<!----------------------------------------Mikayla Ejiri------------------------------------------->
+		<div class="modal" id="mikayla-ejiri">
 			<div class="modal-header">
-				<div class="title">Mikaila Ejiri (Mika)</div>
+				<div class="title">Mikayla Ejiri (Mika)</div>
 				<button data-close-button class="close-button">&times;</button>
 			</div>
 		
@@ -217,7 +217,7 @@
 				<ul data-slides>
 					<li class="slide page1" data-active>
 						<div class="modal-left">
-							<img src="../images/character-images/hidef-mikaila.png" alt="">
+							<img src="../images/character-images/hidef-mikayla.png" alt="">
 						</div>
 						<div class="modal-right"> 
 				   				<p>Mikaila Ejiri, nicknamed Mika by her close friend Carter, was born in the city of Halivaara of the Mino province to Emil and Ailisa Ejiri. She’s a 20-year-old girl with black and tawny wavy hair that extends to her shoulders. She has light brown skin and bright yellow eyes. Although she’s of the Azores bloodline, her eye color is different from the distinctive red eyes common among those of the Azores family due to her being mixed with the Aria bloodline.</p>
@@ -235,7 +235,7 @@
 						</div>
 					</li>
 					<li class="slide page2">Character Outfit Sheet</li>
-					<li class="slide page3"><img src="../images/character-stats/mikaila-ejiri-stats.png" alt=""></li>
+					<li class="slide page3"><img src="../images/character-stats/mikayla-ejiri-stats.png" alt=""></li>
 				
 				</ul>
 			</div>
@@ -564,19 +564,24 @@ console.log(gallery)
 			const filterValue = e.target.dataset.filter
 			galleryTile.forEach(item => {
 			
+				item.style.display ='none'
 				if(item.classList.contains(filterValue) || filterValue === "all"){
+					setTimeout( ()=> {
 					item.classList.add("show")
 					item.classList.remove("hide")
-					item.style.display = "block"
+					item.style.display= 'block'
+					//This will show the items
+				})
 				}
+
 				else{
+					
 					item.classList.remove('show')
 					item.classList.add("hide")
-					item.addEventListener("animationend", () => {
-						if(item.classList.contains("hide")) {
-							item.style.display = 'none'
-						}
-					}, {once: true})
+					setTimeout( () => {
+					 item.style.display = 'none'
+					}, 300);
+					//this makes the items go away
 				}
 			})
 		}

@@ -321,10 +321,12 @@ section {
 .gallery__tile.show {
   animation: show .3s ease-in-out 0s 1 forwards;
   transform-origin: center;
+  
 }
 .gallery__tile.hide {
   animation: hide .3s ease-in-out 0s 1 forwards;
   transform-origin: center;
+  
 }
 
 .gallery__tile img {
