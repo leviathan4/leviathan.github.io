@@ -616,6 +616,7 @@ section {
 
 /*-------------------------------------------------------Beginning of CSS for the Locations Page--------------------------------------------------*/
 /*the background container for the map page*/
+
 .home-map {
   position: relative;
   width: 100%;
@@ -623,13 +624,13 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
+  /*background-image: url(../images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background-size: cover;
   background-position: center;
   overflow: hidden;
   /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
-  padding-inline: 270px;
+  padding-inline: 19%;
 }
 
 svg {
