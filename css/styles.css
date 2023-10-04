@@ -100,11 +100,8 @@ section {
 
 
 /*----------------------------------------------------CSS for Home.------------------------------------------*/
-/* CSS for the background strip on the home page */
 /*Defines what the center home element will look like on the webpage.*/
-
-
-.home {
+.home__section {
   position: relative;
   width: 100%;
   min-height: 100dvh;
@@ -112,24 +109,30 @@ section {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  /*background-image: url(../_images/valley_monolith_by_tacticsogre_d8kisxo.jpg);*/ /*https://www.deviantart.com/tacticsogre/art/Valley-Monolith-518199036*/
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   background-size: cover;
   background-position: center;
   overflow: hidden;
-  /*background-image: linear-gradient(to bottom right, #2696e9 0%, #333 100%);*/
 }
 
+/* CSS for the background strip on the home page */
 .home__background-strip {
   position: absolute;
   background-image: url(../images/valley_monolith_by_tacticsogre_d8kisxo.jpg);
   background-size: cover;
   background-position: center;
   min-height: 70vh;
-  width: 100vw;
+  width: 100%;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+.back-image0 {
+  background-image: url(../images/winter_moutain___video_process_by_jordangrimmer_ddrq828-pre.jpg);
+}
+.back-image1 {
+  background-image: url(../images/landscape_digital_painting_tutorial_by_jordangrimmer_de4y7cu-pre.jpg);
+  
 }
 .home__background-strip::after, .home__background-strip::before {
   content: '';
@@ -152,6 +155,29 @@ section {
   border-width: 0px 0px 1px 0px;
 }
 
+/* Code for the accent marks on homepages without a background photo */
+.black-accent::after, .black-accent::before {
+  content: '';
+  position: absolute;
+  height: 200px;
+  width: 600px;
+  border-style: solid;
+  animation: widthIn 0.4s ease-in-out;
+}
+.black-accent::after {
+  border-color: black;
+  top: 80%;
+  left: 0;
+  border-width: 1px 0px 0px;
+}
+.black-accent::before {
+  border-color: black;
+  bottom: 80%;
+  right: 0;
+  border-width: 0px 0px 1px 0px;
+}
+
+
 /* CSS for the stuff inside the content Div */
 .home__content {
   z-index: 888;
@@ -163,6 +189,7 @@ section {
   justify-content: center;
   align-items: center;
 }
+/* Sets the text lettering for the word Leviathan */
 .home__content h1 {
   font-size: 4em;
   font-weight: 400;
@@ -172,15 +199,15 @@ section {
   margin-bottom: 20px;
   text-align: center;
 }
-.home__emphasis {
-  font-size: 2em;
-  font-weight: 900;
-}
 .home__content h2 {
   font-size: 1.7em;
 }
+.home__content span {
+  font-size: 2em;
+  font-weight: 900;
+}
 /*Creates the button for READ MORE and allows the button to grow when hovering it.*/
-.home__more-content {
+.home__content a {
   background: #fff;
   padding: 10px 25px;
   color: #1680ac;
@@ -191,32 +218,52 @@ section {
   text-decoration: none;
   border-radius: 2px;
   position: relative;
-  display: inline-block;
   margin-top: 60px;
   transition: transform 0.3s ease;
 }
-.home__more-content:hover {
+.home__content a:hover {
   transform: scale(1.1);
 }
 
-.home2 {
-  padding: 150px 300px;
+
+.alter {
+  background: #ebebeb;
+  padding: 150px 350px;
 }
-.home2 h1 {
+.alter h1 {
   font-family: cinzel;
+  padding-bottom: 20px;
 }
-.home2 p {
-  margin-bottom: 65px;
-}
-.home2 p:first-of-type {
-  /* backdrop-filter: blur(5px);
-  background-color: rgba(0,0,0,.3); */
-  padding: 30px 25px;
-  /* border-radius: 10px; */
+.alter p {
+  padding: 10px 25px;
   font-family: poppins;
-  /* font-size: 1.2em;
-  line-height: 1.2em; */
+  font-size: 1.1rem;
+  font-weight: 200;
+  z-index: 300;
 }
+
+.base {
+  padding: 150px 350px;
+}
+.base h1 {
+  font-family: cinzel;
+  padding-bottom: 20px;
+  color:#fff;
+  z-index: 300;
+}
+.base p {
+  padding: 10px 25px;
+  font-family: poppins;
+  font-size: 1.1rem;
+  font-weight: 200;
+  z-index: 300;
+  color: #fff;
+  background: rgba(21, 26, 31, 0.7);
+  border-radius: 10px;
+  
+}
+
+
 
 
 /*-----------------------------------------------------CSS for media icons------------------------------------------------------*/
@@ -1225,11 +1272,20 @@ svg {
   /* header .navigation {
     display: none;
   } */
+  .home__background-strip::after, .home__background-strip::before {
+    display: none;
+  }
 }
 
 @media (max-width: 480px) {
-  .home2 {
+  .alter {
     padding: 100px 20px;
+  }
+  .base {
+    padding: 100px 20px;
+  }
+  .black-accent {
+    display: none;
   }
   .home__content h1 {
     font-size: 1.7rem;
