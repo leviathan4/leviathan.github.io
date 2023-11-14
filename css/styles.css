@@ -256,7 +256,7 @@ section {
   color:#fff;
   z-index: 300;
 }
-.base p {
+/* .base p {
   padding: 10px 25px;
   font-family: poppins;
   font-size: 1.1rem;
@@ -265,9 +265,22 @@ section {
   color: #fff;
   background: rgba(21, 26, 31, 0.7);
   border-radius: 10px;
-  
+} */
+
+.base .text {
+  padding: 10px 25px;
+  font-family: poppins;
+  font-size: 1.1rem;
+  font-weight: 200;
+  z-index: 300;
+  color: #fff;
+  background: rgba(21, 26, 31, 0.7);
+  border-radius: 10px;
 }
 
+#spirits .text p:first-of-type {
+  margin-bottom: 25px;
+}
 
 
 
