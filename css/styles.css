@@ -1201,14 +1201,21 @@ svg {
   height: 100%;
 }
 
+.element {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: cinzel;
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-width: 350px;
-  max-width: 400px;
-  height: 450px;
+  width: 350px;
+  height: 350px;
   padding: 10px;
   margin: 20px;
   background-color: #ebebeb;
@@ -1216,7 +1223,7 @@ svg {
 }
 
 .left-side {
- height: 50%;
+ height: 80%;
  width: 100%;
  overflow: hidden;
 }
@@ -1231,7 +1238,7 @@ svg {
 .right-side {
   display: flex;
   flex-direction: column;
-  height: 50%;
+  height: 20%;
 }
 
 .wrapper .right-side .header p {
