@@ -1,0 +1,96 @@
+<svg width="1436.8" height="751.94" version="1.1" viewBox="0 0 380.16 198.95" xmlns="http://www.w3.org/2000/svg" xmlns:osb="http://www.openswatchbook.org/uri/2009/osb">
+ <defs>
+  <filter id="filter1633" x="-.041823" y="-.028476" width="1.0836" height="1.057" color-interpolation-filters="sRGB">
+   <feGaussianBlur stdDeviation="0.0016498028"/>
+  </filter>
+ </defs>
+ <g transform="translate(-68.385 -58.543)" filter="url(#filter1633)">
+  <rect x="85.29" y="197.75" width="34.305" height="10.356" fill="#ececec" filter="url(#filter1633)" stroke-linecap="round" stroke-width=".265"/>
+  <circle cx="103.88" cy="212.83" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 72.374 62.025)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect2);shape-padding:0;white-space:pre" xml:space="preserve"><tspan x="70.1875" y="540.48255">Miokosu</tspan></text>
+  <g>
+   <circle cx="121.03" cy="130.82" r="1.892" fill="#4362f8"/>
+   <text transform="matrix(.26458 0 0 .26458 77.16 70.483)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect3);white-space:pre" xml:space="preserve"><tspan x="124.85352" y="206.64856">Anuzan</tspan></text>
+  </g>
+  <g>
+   <circle cx="193.27" cy="95.186" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 67.078 62.93)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect4);white-space:pre" xml:space="preserve"><tspan x="427.09961" y="95.980594">Nagawa
+</tspan></text>
+  </g>
+  <g>
+   <circle cx="161.01" cy="127.26" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 74.187 63.15)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect5);white-space:pre" xml:space="preserve"><tspan x="305.04883" y="221.54505">Naki</tspan></text>
+  </g>
+  <g>
+   <circle cx="207.07" cy="120.5" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 120.94 24.505)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect6);white-space:pre" xml:space="preserve"><tspan x="283.54297" y="340.20911">Kushika</tspan></text>
+  </g>
+  <g>
+   <circle cx="155.85" cy="160.53" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 72.993 65.324)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect7);white-space:pre" xml:space="preserve"><tspan x="283.54297" y="340.20911">Kaida</tspan></text>
+  </g>
+  <g>
+   <circle cx="165.79" cy="188.49" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 79.477 68.549)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect8);white-space:pre" xml:space="preserve"><tspan x="273.83008" y="434.64466">Halivaara</tspan></text>
+  </g>
+  <g>
+   <circle cx="274.01" cy="136.18" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 74.856 65.071)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect9);white-space:pre" xml:space="preserve"><tspan x="690.79688" y="242.27942">Capitol City</tspan></text>
+  </g>
+  <g filter="url(#filter1633)">
+   <circle cx="222.68" cy="168.12" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 79.712 61.475)" fill="#000000" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect10);white-space:pre" xml:space="preserve"><tspan x="479.33789" y="372.90442">Plainsfield</tspan></text>
+  </g>
+  <g>
+   <circle cx="283.27" cy="173.41" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 76.817 67.771)" fill="#000000" filter="url(#filter1633)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect11);white-space:pre" xml:space="preserve"><tspan x="738.28516" y="378.94934">Newwind</tspan></text>
+  </g>
+  <g filter="url(#filter1633)">
+   <circle cx="181.67" cy="203.31" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <path d="m183.69 201.03 5.4738-11.754" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".265"/>
+   <text transform="matrix(.26458 0 0 .26458 69.921 56.002)" fill="#000000" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect12);white-space:pre" xml:space="preserve"><tspan x="447.68555" y="499.58802">Westerdale</tspan></text>
+   <circle cx="173.2" cy="209.66" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <path transform="matrix(.5332 -.08587 .06021 .35316 67.49 151.93)" d="m164.11 222.05 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".60247"/>
+   <text transform="matrix(.26458 0 0 .26458 49.492 75.437)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect13);white-space:pre" xml:space="preserve"><tspan x="312.75781" y="545.14466">Greenhollow</tspan></text>
+   <path transform="matrix(.82579 -.13552 .1256 .98599 7.9331 31.159)" d="m194.94 208.77 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".29066"/>
+   <circle cx="194.2" cy="213.62" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 69.608 53.147)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect17);white-space:pre" xml:space="preserve"><tspan x="468.82812" y="542.68177">Ballymena</tspan></text>
+   <circle cx="183.27" cy="217.14" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 69.022 60.19)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect14);white-space:pre" xml:space="preserve"><tspan x="259.38672" y="643.56067">Mallowbeach</tspan></text>
+   <path transform="matrix(.85589 0 0 .76438 25.191 50.541)" d="m174.71 231.57 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".32763"/>
+   <circle cx="190.66" cy="227.62" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 91.575 65.277)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect15);white-space:pre" xml:space="preserve"><tspan x="250.54883" y="664.53333">Province</tspan></text>
+   <path transform="matrix(.78787 0 0 .74401 40.62 59.361)" d="m180.25 239.8 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".34612"/>
+   <path transform="matrix(.33627 -.03015 .052691 .58767 127.8 93.496)" d="m207.55 212.26 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".59374"/>
+   <circle cx="207.86" cy="214.16" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 65.044 79.788)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect18);white-space:pre" xml:space="preserve"><tspan x="543.22852" y="468.57239">Belltown</tspan></text>
+   <circle cx="206.01" cy="232.15" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 57.92 59.689)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect16);white-space:pre" xml:space="preserve"><tspan x="469.87891" y="717.19934">Rivershear</tspan></text>
+   <path transform="matrix(.75302 0 0 .88305 47.24 26.35)" d="m202.81 246.91 7.2972-10.718" fill="none" filter="url(#filter1633)" stroke="#000" stroke-linecap="round" stroke-width=".32497"/>
+   <circle cx="233.61" cy="214.64" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+   <text transform="matrix(.26458 0 0 .26458 63.854 50.685)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect19);white-space:pre" xml:space="preserve"><tspan x="586.92383" y="654.59778">Redwallow</tspan></text>
+  </g>
+  <circle cx="275.86" cy="213.36" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 73.876 67.921)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect25);white-space:pre" xml:space="preserve"><tspan x="715.16016" y="528.82434">Chemsisi</tspan></text>
+  <circle cx="317.66" cy="219.18" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 76.151 69.181)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect26);white-space:pre" xml:space="preserve"><tspan x="880.95117" y="545.52356">Mangi</tspan></text>
+  <circle cx="301.26" cy="242.47" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 103.93 78.066)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect27);white-space:pre" xml:space="preserve"><tspan x="707.16016" y="605.82434">Makoso</tspan></text>
+  <circle cx="342" cy="108.32" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 80.613 72.284)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect28);white-space:pre" xml:space="preserve"><tspan x="932.80469" y="107.44348">Province 22</tspan></text>
+  <circle cx="377.19" cy="156.74" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 71.765 65.649)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect29);white-space:pre" xml:space="preserve"><tspan x="1091.2852" y="319.32434">Province 24</tspan></text>
+  <circle cx="382.22" cy="76.839" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 70.797 59.327)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect30);white-space:pre" xml:space="preserve"><tspan x="1118.3906" y="45.246219">Province 23</tspan></text>
+  <circle cx="425.88" cy="127.11" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 79.882 65.814)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect31);white-space:pre" xml:space="preserve"><tspan x="1240.6074" y="203.25598">Province 25</tspan></text>
+  <circle cx="411.06" cy="175.53" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 74.074 62.064)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect32);white-space:pre" xml:space="preserve"><tspan x="1228.2148" y="398.172">Province 26</tspan></text>
+  <circle cx="328.51" cy="151.98" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 74.597 66.236)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect33);white-space:pre" xml:space="preserve"><tspan x="904.46094" y="302.18958">Province 27</tspan></text>
+  <circle cx="324.54" cy="186.11" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 66.92 63.375)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect34);white-space:pre" xml:space="preserve"><tspan x="929.03516" y="439.19934">Province 28</tspan></text>
+  <circle cx="363.96" cy="207.28" r="1.892" fill="#4362f8" filter="url(#filter1633)"/>
+  <text transform="matrix(.26458 0 0 .26458 75.458 61.728)" font-family="sans-serif" font-size="21.333px" style="line-height:1.25;shape-inside:url(#rect35);white-space:pre" xml:space="preserve"><tspan x="1027.4102" y="520.9513">Province 29</tspan></text>
+ </g>
+</svg>
