@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Javascript Test Site</title>
+	<link rel="icon" href="_images/favicon.png">
+	<link href="../css/javascriptTest.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+  <header>
+		<a href="#" class="logo">JavaScript Test Site</a>
+		<!-- <nav class="navigation">
+				<div class="navigation-items">
+				    <a href="../index.html">Home</a>
+					  <a href="index.html" class="active">Characters</a>
+					  <a href="../locations/index.html">Map</a>
+					  <a href="../spirits/index.html">Spirits</a>
+					  <a href="../story_arcs/index.html">Story Arcs</a>
+				</div>
+		</nav> -->
+  	</header>
+
+	  <!-- <canvas id="gameCanvas" width="800" height="600"></canvas> -->
+	  
+	  <form>
+		<h1>Temperature Conversion:</h1>
+		<input type="number" id="textBox" value="" placeholder="Temp"><br>
+
+		<input type="radio" id="toFahrenheit" name="unit">
+		<label for="toFahrenheit">Celsius ➡ Fahrenheit</label><br>
+
+		<input type="radio" id="toCelsius" name="unit">
+		<label for="toCelsius">Fahrenheit ➡ Celsius</label><br>
+
+		<button type="button" onclick="convert()">Submit</button>
+		<p id="result">Select a unit</p>
+
+	  </form>
+
+   
+<script>
+const textBox = document.getElementById('textBox')
+const toFahrenheit = document.getElementById('toFahrenheit')
+const toCelsius = document.getElementById('toCelsius')
+const result = document.getElementById('result')
+
+
+function  convert() {
+    if(toFahrenheit.checked) {
+        temp = Number(textBox.value)
+        temp = temp * 9 / 5 + 32;
+        result.textContent = temp.toFixed(1) + "°F"
+    }
+	else if(toCelsius.checked){
+        temp = Number(textBox.value)
+        temp = (temp -32) * (5/9)
+        result.textContent = temp.toFixed(1) + "°C"
+    }
+    else {
+        result. textContent = "Select a unit"
+    }
+}
+let multiLineString = `This is line 1
+This is line 2
+This is line 3`;
+
+let multiline = `this is test1 
+this is test2 
+this is test3 ${multiLineString}`
+console.log(multiline)
+
+/*
+let username = window.prompt("Enter your username: ").trim();
+
+// Split the trimmed username into parts, handling multiple spaces
+let nameParts = username.split(/\s+/);
+
+if (nameParts.length < 2) {
+    console.log("Please enter both first and last names.");
+} else {
+    // Extract first and last name
+    let firstName = nameParts[0].charAt(0).toUpperCase() + nameParts[0].slice(1).toLowerCase();
+    let lastName = nameParts[nameParts.length - 1].charAt(0).toUpperCase() + nameParts[nameParts.length - 1].slice(1).toLowerCase();
+
+    console.log(`First Name: ${firstName}`);
+    console.log(`Last Name: ${lastName}`);
+}
+
+console.log(nameParts)
+
+console.log("2" - "2")
+*/
+/*
+const canvas = document.getElementById('gameCanvas');
+const ctx = canvas.getContext('2d');
+
+let player = {
+    x: 50,
+    y: 50,
+    width: 50,
+    height: 50,
+    color: '#ff8080',
+    speed: 5.5
+};
+
+let keys = {};
+
+window.addEventListener('keydown', function(e) {
+    keys[e.key] = true;
+});
+
+window.addEventListener('keyup', function(e) {
+    keys[e.key] = false;
+});
+
+function update() {
+    if (keys['ArrowUp']) player.y -= player.speed;
+    if (keys['ArrowDown']) player.y += player.speed;
+    if (keys['ArrowLeft']) player.x -= player.speed;
+    if (keys['ArrowRight']) player.x += player.speed;
+
+    // Keep the player within the canvas bounds
+    if (player.x < 0) player.x = 0;
+    if (player.y < 0) player.y = 0;
+    if (player.x + player.width > canvas.width) player.x = canvas.width - player.width;
+    if (player.y + player.height > canvas.height) player.y = canvas.height - player.height;
+}
+
+function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = player.color;
+    ctx.fillRect(player.x, player.y, player.width, player.height);
+}
+
+function gameLoop() {
+    update();
+    draw();
+    requestAnimationFrame(gameLoop);
+}
+
+gameLoop();
+*/
+
+</script>
+</body>
+</html>
